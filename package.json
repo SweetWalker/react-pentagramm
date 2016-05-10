@@ -1,0 +1,43 @@
+{
+  "name": "react-pentagramm",
+  "version": "1.0.0",
+  "description": "React Pentagramm",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "lint": "eslint src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/SweetWalker/react-pentagramm.git"
+  },
+  "author": "SWalker",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SweetWalker/react-pentagramm/issues"
+  },
+  "homepage": "https://github.com/SweetWalker/react-pentagramm#readme",
+  "devDependencies": {
+    "babel-core": "^6.0.20",
+    "babel-eslint": "^4.1.3",
+    "babel-loader": "^6.0.1",
+    "babel-preset-es2015": "^6.0.15",
+    "babel-preset-react": "^6.0.15",
+    "babel-preset-stage-0": "^6.0.15",
+    "eslint": "^1.10.3",
+    "eslint-plugin-react": "^3.6.2",
+    "react-hot-loader": "^1.3.0",
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.12.1"
+  },
+  "dependencies": {
+    "jquery": "^2.2.3",
+    "marked": "^0.3.5",
+    "material-ui": "^0.15.0",
+    "react": "0.14.6",
+    "react-dom": "^0.14.6",
+    "react-redux": "^4.4.5",
+    "react-tap-event-plugin": "^1.0.0",
+    "redux": "^3.5.2"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "test-rest-server",
+  "version": "1.0.0",
+  "description": "Test REST server",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.4.3",
+    "express": "^4.4.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/SweetWalker/react-pentagramm.git"
+  },
+
+  "author": "SWalker",
+
+  "homepage": "https://github.com/SweetWalker/react-pentagramm",
+  "engines" : {
+    "node" : "0.12.x"
+  }
+}
