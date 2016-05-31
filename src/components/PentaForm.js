@@ -8,7 +8,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 export default class PentaForm extends Component {
   constructor(props){
     super(props);
-    this.state = {author: '', text: ''};
+    this.state = {author: '', text: '', photo: ''};
   }
 
   handleAuthorChange(e) {
@@ -28,7 +28,8 @@ export default class PentaForm extends Component {
     if (!text || !author) {
       return;
     }
-    this.props.onCommentSubmit({author: author, text: text, photo: photo});
+    console.log(this.props.url);
+    this.props.addMessage(this.props.url, {author: author, text: text, photo: photo});
     this.setState({author: '', text: '', photo: ''});
   }
   render() {

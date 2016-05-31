@@ -62,6 +62,7 @@ app.post('/api/comments', function(req, res) {
       process.exit(1);
     }
     var comments = JSON.parse(data);
+    if(!req.body.author && !req.body.text) return;
     var newComment = {
       id: Date.now(),
       author: req.body.author,
