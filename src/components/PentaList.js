@@ -1,15 +1,19 @@
 import React, { Component } from 'react';
 import PentaMessage from './PentaMessage';
+import { connect } from 'react-redux';
+import * as actions from '../actions/PentaFeed';
 
-export default class PentaList extends Component {
+export default connect()
+(class PentaList extends Component {
   render() {
-    var pentaNodes = this.props.data.map(function(comment) {
+    let { dispatch, url } = this.props;
+    var pentaNodes = this.props.data.map(comment => {
         return (
-          <PentaMessage removeAction={this.props.removeMessage} url={this.props.url} message={comment} key={comment.id}>
+          <PentaMessage removeAction={actions.deleteMessage} dispatch={dispatch} url={url} message={comment} key={comment.id}>
             {comment.text}
           </PentaMessage>
         );
-    }.bind(this))
+    });
     return (<div className="penta-list">{pentaNodes}</div>)
   }
-}
+})

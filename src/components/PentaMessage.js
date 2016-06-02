@@ -16,7 +16,7 @@ export default class PentaMessage extends Component {
         <div className="comment">
           <h2 className="commentAuthor">
             {this.props.message.author}
-            <RaisedButton label="Delete" primary={true} onClick={ () => this.props.removeAction(this.props.url, this.props.message.id) }/>
+            <RaisedButton label="Delete" primary={true} onClick={ () => this.props.removeAction(this.props.url, this.props.message.id)(this.props.dispatch) }/>
           </h2>
           <span dangerouslySetInnerHTML={this.rawMarkup()} />
           <img src={this.props.message.photo} alt="" className="img-responsive"/>

@@ -9,6 +9,8 @@ export const initialState = {
 
 function mainFeed(state = initialState, { type, payload }) {
   switch(type) {
+    case actionTypes.GET_ALL_MESSAGES:
+      return reducers.getMessages(state, payload)
     case actionTypes.ADD_PENTA_MESSAGE:
       return reducers.addMessage(state, payload);
     case actionTypes.DELETE_PENTA_MESSAGE:

@@ -1,3 +1,9 @@
+export function getMessages(state, payload) {
+  return {
+    ...state,
+    data: payload
+  };
+}
 export function addMessage(state, payload) {
   return {
     ...state,
