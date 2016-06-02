@@ -4,13 +4,18 @@ import PentaList from './PentaList';
 import { connect } from 'react-redux';
 import * as actions from '../actions/PentaFeed';
 import { bindActionCreators } from 'redux';
+import MessageService from '../utils/services/message';
 
 export default connect(state => state)
 (class PentaBox extends Component {
   componentDidMount() {
-    this.props.dispatch(actions.fetchMessages(this.props.url))
-    // this.loadCommentsFromServer();
-    // setInterval(this.loadCommentsFromServer.bind(this), this.props.pollInterval);
+    let service = MessageService.getInstance(this.props.url);
+    service.getAllMessages();
+
+    setInterval(
+      () => service.getAllMessages(),
+      this.props.pollInterval
+    );
   }
   render() {
     // const add = bindActionCreators(actions.saveMessage, this.props.dispatch);

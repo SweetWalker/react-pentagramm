@@ -4,6 +4,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 
+import MessageService from '../utils/services/message';
 
 export default class PentaForm extends Component {
   constructor(props){
@@ -22,14 +23,20 @@ export default class PentaForm extends Component {
   }
   handleSubmit(e) {
     e.preventDefault();
-    var author = this.state.author.trim();
-    var text = this.state.text.trim();
-    var photo = this.state.photo;
-    if (!text || !author) {
+    let { photo, author, text } = this.state;
+    let { url } = this.props;
+
+    if (!text.trim() || !author.trim()) {
       return;
     }
-    console.log(this.props.url);
-    this.props.addMessage(this.props.url, {author: author, text: text, photo: photo});
+
+    MessageService.getInstance()
+      .saveMessage({
+        author: author.trim(),
+        text: text.trim(),
+        photo: photo
+      });
+
     this.setState({author: '', text: '', photo: ''});
   }
   render() {

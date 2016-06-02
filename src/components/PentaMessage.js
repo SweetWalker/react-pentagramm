@@ -3,6 +3,7 @@ import marked from 'marked';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import RaisedButton from 'material-ui/RaisedButton';
+import MessageService from '../utils/services/message';
 
 export default class PentaMessage extends Component {
   rawMarkup() {
@@ -11,15 +12,17 @@ export default class PentaMessage extends Component {
   }
 
   render() {
+    let { url, message } = this.props;
+
     return (
       <MuiThemeProvider muiTheme={getMuiTheme()}>
         <div className="comment">
           <h2 className="commentAuthor">
-            {this.props.message.author}
-            <RaisedButton label="Delete" primary={true} onClick={ () => this.props.removeAction(this.props.url, this.props.message.id)(this.props.dispatch) }/>
+            {message.author}
+            <RaisedButton label="Delete" primary={true} onClick={ () => MessageService.getInstance().removeMessage(message.id) }/>
           </h2>
           <span dangerouslySetInnerHTML={this.rawMarkup()} />
-          <img src={this.props.message.photo} alt="" className="img-responsive"/>
+          <img src={message.photo} alt="" className="img-responsive"/>
         </div>
       </MuiThemeProvider>
     );
