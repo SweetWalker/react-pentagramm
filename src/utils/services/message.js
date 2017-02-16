@@ -1,7 +1,7 @@
 import 'whatwg-fetch';
 
-import * as actions from '../../actions/PentaFeed';
-import store from '../../store';
+import * as actions from '../../actions/pentabox/PentaFeed';
+import store from '../../stores/pentabox/store';
 
 export default (function() {
     let Service = function(url) {

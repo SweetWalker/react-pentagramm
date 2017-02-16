@@ -1,4 +1,4 @@
-import * as constants from '../constants/ActionType';
+import * as constants from '../../constants/pentabox';
 import 'whatwg-fetch';
 
 export function getMessages(messages) {

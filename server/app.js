@@ -76,7 +76,7 @@ app.post('/api/comments', function(req, res) {
         process.exit(1);
       }
       res.setHeader('Cache-Control', 'no-cache');
-      res.json(comments);
+      res.json(newComment);
     });
   });
 });

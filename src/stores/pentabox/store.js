@@ -1,7 +1,7 @@
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
-import * as actionTypes from './constants/ActionType';
-import * as reducers from './reducers/PentaFeed';
+import * as actionTypes from '../../constants/pentabox';
+import * as reducers from '../../reducers/pentabox/PentaFeed';
 
 export const initialState = {
   data: []

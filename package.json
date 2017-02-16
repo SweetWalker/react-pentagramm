@@ -31,16 +31,19 @@
     "webpack-dev-server": "^1.12.1"
   },
   "dependencies": {
-    "lodash": "^4.12.0",
+    "css-loader": "^0.23.1",
     "marked": "^0.3.5",
     "material-ui": "^0.15.0",
-    "react": "0.14.6",
-    "react-dom": "^0.14.6",
+    "react": "15.1.0",
+    "react-dom": "^15.1.0",
     "react-redux": "^4.4.5",
     "react-router": "^2.4.0",
     "react-tap-event-plugin": "^1.0.0",
     "redux": "^3.5.2",
     "redux-thunk": "^2.1.0",
+    "style-loader": "^0.13.1",
+    "stylus-loader": "^2.1.0",
+    "url-loader": "^0.5.7",
     "whatwg-fetch": "^1.0.0"
   }
 }

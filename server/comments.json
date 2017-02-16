@@ -5,5 +5,17 @@
         "text": "Dont Know",
         "photo": "http://risovach.ru/upload/2013/06/mem/mitb_22530072_orig_.jpeg",
         "liked": false
+    },
+    {
+        "id": 1464941542774,
+        "author": "Zed",
+        "text": "Android",
+        "photo": "https://pp.vk.me/c543106/v543106348/14f8b/HwKIfavL1OA.jpg"
+    },
+    {
+        "id": 1476703098741,
+        "author": "123",
+        "text": "123",
+        "photo": "123"
     }
 ]
